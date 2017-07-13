@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    # Repositories
+    AppBundle\Repository\UserRepository:
+        factory: "doctrine:getRepository"
+        arguments: ["AppBundle:User"]
